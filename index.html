@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS AI</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>J.A.R.V.I.S</h1>
+        <p class="subtitle">JUST A RATHER VERY INTELLIGENT SYSTEM</p>
+
+        <div class="hud">
+    <div class="hud-ring ring-outer"></div>
+    <div class="hud-ring ring-middle"></div>
+    <div class="hud-ring ring-inner"></div>
+    <div class="hud-center">J.A.R.V.I.S
+        
+    </div>
+    </div>
+
+        <h2 id="status">SYSTEM ONLINE</h2>
+        <p class="welcome">Good day, Sir. How may I assist you?</p>
+
+        <div class="chat-box" id="chatBox">
+            <div class="message bot">JARVIS: All systems are ready.</div>
+        </div>
+
+        <div class="input-area">
+            <input id="userInput" type="text"
+                   placeholder="Ask JARVIS anything...">
+            <button onclick="sendMessage()">SEND</button>
+        </div>
+
+        <button class="mic" onclick="startListening()">🎙 ACTIVATE VOICE</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
